@@ -1,0 +1,12 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mMainTestBDD:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mQ1. List Print[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m-  should not take empty list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mQ2. Finding Max[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m-  should output 66 for list List(1, 2, 66, 4)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m-  should output 2 for list List(0, 1, 2)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should output 3 for list List(3, 2, 1)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m-  should not accept empty list : [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mQ3. Nth Fibonacci [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m-  should output 55 for n equal to 10 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mQ4. Sum of digits [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m-  should output 3 for input 5 [0m[0m
