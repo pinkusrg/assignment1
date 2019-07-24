@@ -1,0 +1,35 @@
+[0m[[0m[0minfo[0m] [0m[0mscalastyle using config /home/knoldus/ScalaProjects/assignment1/scalastyle-config.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mStarting scalastyle[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:1: Header does not match expected text[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:52:34: There should be a space after the plus (+) sign[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:52:34: There should be a space before the plus (+) sign[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:18:20: Magic Number[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:18:23: Magic Number[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:18:25: Magic Number[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:18:27: Magic Number[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:18:29: Magic Number[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:25:11: Magic Number[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:9:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:10:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:11:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:12:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:13:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:14:10: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:23:16: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:24:16: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:25:16: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:26:16: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:36:6: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:47:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:65:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:81:4: Regular expression matched 'println'[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala:51:6: If block needs braces[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Processed 1 file(s)[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 errors[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 24 warnings[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 infos[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Finished in 12 ms[0m
+[0m[[0m[32msuccess[0m] [0m[0mcreated output: /home/knoldus/ScalaProjects/assignment1/target[0m
+[0m[[0m[33mwarn[0m] [0m[0mwarnings exist[0m

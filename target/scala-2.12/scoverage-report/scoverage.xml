@@ -1,0 +1,329 @@
+<scoverage 
+statement-count="90" statements-invoked="61" statement-rate="67.78" branch-rate="93.75" version="1.0" timestamp="1563964281503">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="90" statements-invoked="61" statement-rate="67.78">
+            <classes>
+                <class 
+                name="Main" filename="Main.scala" statement-count="90" statements-invoked="61" statement-rate="67.78" branch-rate="93.75">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Main/nfibonacci" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1549" end="1589" line="65" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1513" end="1514" line="63" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1513" end="1514" line="63" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1520" end="1535" line="63" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1541" end="1590" line="65" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1507" end="1511" line="63" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="nfibonacci" start="1520" end="1535" line="63" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/digitSum" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2176" end="2179" line="96" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2228" end="2243" line="98" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2197" end="2253" line="98" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2146" end="2167" line="95" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2236" end="2241" line="98" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2221" end="2252" line="98" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2228" end="2251" line="98" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2197" end="2253" line="98" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2150" end="2167" line="95" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="digitSum" start="2214" end="2219" line="98" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/fact" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2046" end="2051" line="89" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2041" end="2060" line="89" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2023" end="2029" line="89" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2031" end="2034" line="89" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2041" end="2060" line="89" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2052" end="2059" line="89" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fact" start="2031" end="2034" line="89" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/sumOfDigits" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1871" end="1872" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1855" end="1891" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1897" end="1948" line="82" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1815" end="1838" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1873" end="1890" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1873" end="1882" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="sumOfDigits" start="1905" end="1947" line="82" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/showList" statement-count="12" statements-invoked="3" statement-rate="25.00" branch-rate="50.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="877" end="929" line="33" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="935" end="1004" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="945" end="946" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="994" end="1003" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="877" end="929" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="974" end="1004" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="856" end="856" line="33" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="986" end="991" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="950" end="965" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="859" end="875" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="982" end="1003" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="showList" start="856" end="856" line="33" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/fibo" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fibo" start="1691" end="1697" line="72" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fibo" start="1707" end="1744" line="73" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fibo" start="1738" end="1743" line="73" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fibo" start="1686" end="1689" line="72" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fibo" start="1719" end="1733" line="73" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="fibo" start="1707" end="1744" line="73" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/maxFind" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="maxFind" start="1123" end="1175" line="45" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="maxFind" start="1186" end="1199" line="47" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="maxFind" start="1123" end="1175" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="maxFind" start="1097" end="1097" line="44" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="maxFind" start="1097" end="1097" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="maxFind" start="1100" end="1114" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/tailMaxFind" statement-count="15" statements-invoked="15" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1402" end="1409" line="56" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1319" end="1324" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1390" end="1438" line="56" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1336" end="1343" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1302" end="1356" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1352" end="1355" line="52" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1273" end="1290" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1376" end="1379" line="54" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1327" end="1330" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1416" end="1437" line="56" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1345" end="1346" line="52" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1302" end="1356" line="52" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1277" end="1290" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1314" end="1325" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="tailMaxFind" start="1421" end="1436" line="56" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Main/main" statement-count="20" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="696" end="711" line="25" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="501" end="515" line="22" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="532" end="557" line="23" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="749" end="787" line="26" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="155" end="199" line="10" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="293" end="338" line="13" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="624" end="637" line="24" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="253" end="288" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="607" end="622" line="24" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="654" end="681" line="25" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="424" end="441" line="18" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="540" end="556" line="23" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="120" end="150" line="9" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="724" end="724" line="25" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="509" end="509" line="22" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="713" end="732" line="25" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="574" end="597" line="24" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="204" end="248" line="11" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="634" end="634" line="24" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="/home/knoldus/ScalaProjects/assignment1/src/main/scala/Main.scala" method="main" start="392" end="407" line="16" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

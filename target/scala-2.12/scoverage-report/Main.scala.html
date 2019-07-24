@@ -1,0 +1,2039 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          Main.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>import scala.annotation.tailrec
+</span>2 <span style=''>import scala.io.StdIn
+</span>3 <span style=''>
+</span>4 <span style=''>object Main {
+</span>5 <span style=''>
+</span>6 <span style=''>  def main(args : Array[String]): Unit =
+</span>7 <span style=''>  {
+</span>8 <span style=''>
+</span>9 <span style=''>    </span><span style='background: #F0ADAD'>println(&quot;Choose the option :&quot;)</span><span style=''>
+</span>10 <span style=''>    </span><span style='background: #F0ADAD'>println(&quot;1. String Interpolation and list.&quot;)</span><span style=''>
+</span>11 <span style=''>    </span><span style='background: #F0ADAD'>println(&quot;2. Maximum element from the list.&quot;)</span><span style=''>
+</span>12 <span style=''>    </span><span style='background: #F0ADAD'>println(&quot;3. nth Fibonacci number.&quot;)</span><span style=''>
+</span>13 <span style=''>    </span><span style='background: #F0ADAD'>println(&quot;4. sum of digits of the factorial.&quot;)</span><span style=''>
+</span>14 <span style=''>        //println(&quot;5. 5 to quit..&quot;)
+</span>15 <span style=''>
+</span>16 <span style=''>    val input = </span><span style='background: #F0ADAD'>StdIn.readInt()</span><span style=''>
+</span>17 <span style=''>
+</span>18 <span style=''>    val list = </span><span style='background: #F0ADAD'>List(12,4,5,6,72)</span><span style=''>
+</span>19 <span style=''>    //val list = List()
+</span>20 <span style=''>
+</span>21 <span style=''>    input match {
+</span>22 <span style=''>      case 1 =&gt; </span><span style='background: #F0ADAD'>showList(list)</span><span style=''>
+</span>23 <span style=''>      case 2 =&gt; </span><span style='background: #F0ADAD'>println(maxFind(list, 0))</span><span style=''>
+</span>24 <span style=''>      case 3 =&gt; </span><span style='background: #F0ADAD'>println(&quot;Enter nth : &quot;)</span><span style=''>; val n = </span><span style='background: #F0ADAD'>StdIn.readInt()</span><span style=''>; </span><span style='background: #F0ADAD'>nfibonacci(n)</span><span style=''>
+</span>25 <span style=''>      case 4 =&gt; </span><span style='background: #F0ADAD'>println(&quot;Enter the Number&quot;)</span><span style=''>; val number = </span><span style='background: #F0ADAD'>StdIn.readInt()</span><span style=''>; </span><span style='background: #F0ADAD'>sumOfDigits(number)</span><span style=''>
+</span>26 <span style=''>      case _ =&gt; </span><span style='background: #F0ADAD'>println(&quot;Choose the correct option..&quot;)</span><span style=''>
+</span>27 <span style=''>    }
+</span>28 <span style=''>  }
+</span>29 <span style=''>
+</span>30 <span style=''>  //Question 1
+</span>31 <span style=''>  def showList(digits : List[Int])={
+</span>32 <span style=''>
+</span>33 <span style=''>    if(</span><span style='background: #AEF1AE'>digits.size == 0</span><span style=''>) </span><span style='background: #AEF1AE'>throw new IllegalStateException(&quot;List size is null&quot;)</span><span style=''>
+</span>34 <span style=''>
+</span>35 <span style=''>    </span><span style='background: #F0ADAD'>for (i &lt;- 0 to digits.length-1){
+</span>36 <span style=''></span><span style='background: #F0ADAD'>      println(i + &quot; = &quot; + digits(i))</span><span style=''>
+</span>37 <span style=''>    }
+</span>38 <span style=''>    digits
+</span>39 <span style=''>  }
+</span>40 <span style=''>
+</span>41 <span style=''>  //Question 2
+</span>42 <span style=''>  def maxFind(list: List[Int], index: Int): Int={
+</span>43 <span style=''>
+</span>44 <span style=''>    if(</span><span style='background: #AEF1AE'>list.size == 0</span><span style=''>){
+</span>45 <span style=''>      </span><span style='background: #AEF1AE'>throw new IllegalStateException(&quot;List size is null&quot;)</span><span style=''>
+</span>46 <span style=''>    }
+</span>47 <span style=''>    </span><span style='background: #AEF1AE'>println(list)</span><span style=''>
+</span>48 <span style=''>    @tailrec
+</span>49 <span style=''>    def tailMaxFind(a : Int,i:Int,max:Int): Int={
+</span>50 <span style=''>
+</span>51 <span style=''>      if(</span><span style='background: #AEF1AE'>i &lt; list.length-1</span><span style=''>) {
+</span>52 <span style=''>        </span><span style='background: #AEF1AE'>tailMaxFind(list(i + 1), i+1, if (a &gt; max) a else max)</span><span style=''>
+</span>53 <span style=''>      }
+</span>54 <span style=''>      else </span><span style='background: #AEF1AE'>max</span><span style=''>
+</span>55 <span style=''>    }
+</span>56 <span style=''>    </span><span style='background: #AEF1AE'>tailMaxFind(list(0),index,list(list.length - 1))</span><span style=''>
+</span>57 <span style=''>
+</span>58 <span style=''>  }
+</span>59 <span style=''>
+</span>60 <span style=''>  //Question 3
+</span>61 <span style=''>  def nfibonacci(n:Int)={
+</span>62 <span style=''>
+</span>63 <span style=''>    val nfibo = if (</span><span style='background: #AEF1AE'>n==0</span><span style=''>) </span><span style='background: #AEF1AE'>0</span><span style=''> else </span><span style='background: #AEF1AE'>fibo(0,1, n, 2)</span><span style=''>
+</span>64 <span style=''>
+</span>65 <span style=''>    </span><span style='background: #AEF1AE'>println(&quot;nth element of Fibonacci is : &quot; + nfibo)</span><span style=''>
+</span>66 <span style=''>
+</span>67 <span style=''>    nfibo
+</span>68 <span style=''>
+</span>69 <span style=''>  }
+</span>70 <span style=''>  @tailrec
+</span>71 <span style=''>  def fibo(first: Int, second: Int, n: Int,i: Int) : Int ={
+</span>72 <span style=''>    if (</span><span style='background: #AEF1AE'>i&gt;n</span><span style=''>) </span><span style='background: #AEF1AE'>second</span><span style=''>
+</span>73 <span style=''>    else </span><span style='background: #AEF1AE'>fibo(second,first + second, n, i + 1)</span><span style=''>
+</span>74 <span style=''>  }
+</span>75 <span style=''>
+</span>76 <span style=''>  //Question 4
+</span>77 <span style=''>  def sumOfDigits(number:Int)={
+</span>78 <span style=''>
+</span>79 <span style=''>    val digits = </span><span style='background: #AEF1AE'>fact(number,1).toString</span><span style=''>
+</span>80 <span style=''>    val total = </span><span style='background: #AEF1AE'>digitSum(digits,0,digits(0).asDigit)</span><span style=''>
+</span>81 <span style=''>
+</span>82 <span style=''>    </span><span style='background: #AEF1AE'>println(&quot;Factorial = &quot; + digits+ &quot;,Sum = &quot; + total)</span><span style=''>
+</span>83 <span style=''>
+</span>84 <span style=''>    total
+</span>85 <span style=''>  }
+</span>86 <span style=''>
+</span>87 <span style=''>  @tailrec
+</span>88 <span style=''>  def fact(i: Int,res :Int):BigInt = {
+</span>89 <span style=''>    if (</span><span style='background: #AEF1AE'>i == 1</span><span style=''>) </span><span style='background: #AEF1AE'>res</span><span style=''> else (</span><span style='background: #AEF1AE'>fact(i - 1,res * i)</span><span style=''>)
+</span>90 <span style=''>  }
+</span>91 <span style=''>
+</span>92 <span style=''>  @tailrec
+</span>93 <span style=''>  def digitSum(digits: String, i : Int, res: Int): Int = {
+</span>94 <span style=''>
+</span>95 <span style=''>    if (</span><span style='background: #AEF1AE'>i &gt; digits.length - 2</span><span style=''>){
+</span>96 <span style=''>      </span><span style='background: #AEF1AE'>res</span><span style=''>
+</span>97 <span style=''>    }else{
+</span>98 <span style=''>      </span><span style='background: #AEF1AE'>digitSum(digits, i + 1, res + (digits( i + 1 ).asDigit))</span><span style=''>
+</span>99 <span style=''>    }
+</span>100 <span style=''>  }
+</span>101 <span style=''>
+</span>102 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          120
+          -
+          150
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Choose the option :&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          155
+          -
+          199
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;1. String Interpolation and list.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          204
+          -
+          248
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;2. Maximum element from the list.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          253
+          -
+          288
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;3. nth Fibonacci number.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          293
+          -
+          338
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;4. sum of digits of the factorial.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          392
+          -
+          407
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          424
+          -
+          441
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.collection.immutable.List.apply[Int](12, 4, 5, 6, 72)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          501
+          -
+          515
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.showList
+        </td>
+        <td style="background: #F0ADAD">
+          Main.this.showList(list)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          509
+          -
+          509
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          532
+          -
+          557
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Main.this.maxFind(list, 0))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          540
+          -
+          556
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.maxFind
+        </td>
+        <td style="background: #F0ADAD">
+          Main.this.maxFind(list, 0)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          624
+          -
+          637
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.nfibonacci
+        </td>
+        <td style="background: #F0ADAD">
+          Main.this.nfibonacci(n)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          607
+          -
+          622
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          574
+          -
+          597
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Enter nth : &quot;)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          634
+          -
+          634
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          696
+          -
+          711
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readInt
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.StdIn.readInt()
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          654
+          -
+          681
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Enter the Number&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          724
+          -
+          724
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          713
+          -
+          732
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.sumOfDigits
+        </td>
+        <td style="background: #F0ADAD">
+          Main.this.sumOfDigits(number)
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          749
+          -
+          787
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Choose the correct option..&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          877
+          -
+          929
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new java.lang.IllegalStateException(&quot;List size is null&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          877
+          -
+          929
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new java.lang.IllegalStateException(&quot;List size is null&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          856
+          -
+          856
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          859
+          -
+          875
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          digits.size.==(0)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          856
+          -
+          856
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          935
+          -
+          1004
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.Range.foreach
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.intWrapper(0).to(digits.length.-(1)).foreach[Unit](((i: Int) =&gt; scala.Predef.println(i.+(&quot; = &quot;).+(digits.apply(i)))))
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          945
+          -
+          946
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          950
+          -
+          965
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #F0ADAD">
+          digits.length.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          994
+          -
+          1003
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.apply
+        </td>
+        <td style="background: #F0ADAD">
+          digits.apply(i)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          974
+          -
+          1004
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(i.+(&quot; = &quot;).+(digits.apply(i)))
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          986
+          -
+          991
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot; = &quot;
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          982
+          -
+          1003
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #F0ADAD">
+          i.+(&quot; = &quot;).+(digits.apply(i))
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          1097
+          -
+          1097
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          1097
+          -
+          1097
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          1100
+          -
+          1114
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          list.size.==(0)
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          1123
+          -
+          1175
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new java.lang.IllegalStateException(&quot;List size is null&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          1123
+          -
+          1175
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          throw new java.lang.IllegalStateException(&quot;List size is null&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          1186
+          -
+          1199
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(list)
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          1273
+          -
+          1290
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          i.&lt;(list.length.-(1))
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          1277
+          -
+          1290
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          list.length.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          1319
+          -
+          1324
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          i.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          1336
+          -
+          1343
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          a.&gt;(max)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          1302
+          -
+          1356
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.tailMaxFind
+        </td>
+        <td style="background: #AEF1AE">
+          tailMaxFind(list.apply(i.+(1)), i.+(1), if (a.&gt;(max))
+  a
+else
+  max)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          1352
+          -
+          1355
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          Main.max
+        </td>
+        <td style="background: #AEF1AE">
+          max
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          1327
+          -
+          1330
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          i.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          1345
+          -
+          1346
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          Main.a
+        </td>
+        <td style="background: #AEF1AE">
+          a
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          1302
+          -
+          1356
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          Main.tailMaxFind
+        </td>
+        <td style="background: #AEF1AE">
+          tailMaxFind(list.apply(i.+(1)), i.+(1), if (a.&gt;(max))
+  a
+else
+  max)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          1314
+          -
+          1325
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.apply
+        </td>
+        <td style="background: #AEF1AE">
+          list.apply(i.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          54
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          1376
+          -
+          1379
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          Main.max
+        </td>
+        <td style="background: #AEF1AE">
+          max
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          1402
+          -
+          1409
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.apply
+        </td>
+        <td style="background: #AEF1AE">
+          list.apply(0)
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          1390
+          -
+          1438
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.tailMaxFind
+        </td>
+        <td style="background: #AEF1AE">
+          tailMaxFind(list.apply(0), index, list.apply(list.length.-(1)))
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          1416
+          -
+          1437
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.apply
+        </td>
+        <td style="background: #AEF1AE">
+          list.apply(list.length.-(1))
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          1421
+          -
+          1436
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          list.length.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          1513
+          -
+          1514
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          1513
+          -
+          1514
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          1520
+          -
+          1535
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          Main.fibo
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fibo(0, 1, n, 2)
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          1507
+          -
+          1511
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          n.==(0)
+        </td>
+      </tr><tr>
+        <td>
+          63
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          1520
+          -
+          1535
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.fibo
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fibo(0, 1, n, 2)
+        </td>
+      </tr><tr>
+        <td>
+          65
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          1549
+          -
+          1589
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;nth element of Fibonacci is : &quot;.+(nfibo)
+        </td>
+      </tr><tr>
+        <td>
+          65
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          1541
+          -
+          1590
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;nth element of Fibonacci is : &quot;.+(nfibo))
+        </td>
+      </tr><tr>
+        <td>
+          72
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          1691
+          -
+          1697
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          Main.second
+        </td>
+        <td style="background: #AEF1AE">
+          second
+        </td>
+      </tr><tr>
+        <td>
+          72
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          1686
+          -
+          1689
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          i.&gt;(n)
+        </td>
+      </tr><tr>
+        <td>
+          73
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          1707
+          -
+          1744
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.fibo
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fibo(second, first.+(second), n, i.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          73
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          1738
+          -
+          1743
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          i.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          73
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          1719
+          -
+          1733
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          first.+(second)
+        </td>
+      </tr><tr>
+        <td>
+          73
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          1707
+          -
+          1744
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          Main.fibo
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fibo(second, first.+(second), n, i.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          1815
+          -
+          1838
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigInt.toString
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fact(number, 1).toString()
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          1871
+          -
+          1872
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          1855
+          -
+          1891
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.digitSum
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.digitSum(digits, 0, scala.Predef.charWrapper(scala.Predef.augmentString(digits).apply(0)).asDigit)
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          1873
+          -
+          1890
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.runtime.RichChar.asDigit
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.charWrapper(scala.Predef.augmentString(digits).apply(0)).asDigit
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          1873
+          -
+          1882
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.StringOps.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(digits).apply(0)
+        </td>
+      </tr><tr>
+        <td>
+          82
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          1897
+          -
+          1948
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Factorial = &quot;.+(digits).+(&quot;,Sum = &quot;).+(total))
+        </td>
+      </tr><tr>
+        <td>
+          82
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          1905
+          -
+          1947
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Factorial = &quot;.+(digits).+(&quot;,Sum = &quot;).+(total)
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          2046
+          -
+          2051
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          i.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          2041
+          -
+          2060
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          Main.fact
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fact(i.-(1), res.*(i))
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          2023
+          -
+          2029
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          i.==(1)
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          2031
+          -
+          2034
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.math.BigInt.int2bigInt
+        </td>
+        <td style="background: #AEF1AE">
+          math.this.BigInt.int2bigInt(res)
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          2041
+          -
+          2060
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.fact
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.fact(i.-(1), res.*(i))
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          2052
+          -
+          2059
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.*
+        </td>
+        <td style="background: #AEF1AE">
+          res.*(i)
+        </td>
+      </tr><tr>
+        <td>
+          89
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          2031
+          -
+          2034
+        </td>
+        <td>
+          ApplyImplicitView
+        </td>
+        <td>
+          scala.math.BigInt.int2bigInt
+        </td>
+        <td style="background: #AEF1AE">
+          math.this.BigInt.int2bigInt(res)
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          82
+        </td>
+        <td>
+          2146
+          -
+          2167
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          i.&gt;(digits.length().-(2))
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          81
+        </td>
+        <td>
+          2150
+          -
+          2167
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          digits.length().-(2)
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          83
+        </td>
+        <td>
+          2176
+          -
+          2179
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          Main.res
+        </td>
+        <td style="background: #AEF1AE">
+          res
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          86
+        </td>
+        <td>
+          2228
+          -
+          2243
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.StringOps.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(digits).apply(i.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          89
+        </td>
+        <td>
+          2197
+          -
+          2253
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Main.digitSum
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.digitSum(digits, i.+(1), res.+(scala.Predef.charWrapper(scala.Predef.augmentString(digits).apply(i.+(1))).asDigit))
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          85
+        </td>
+        <td>
+          2236
+          -
+          2241
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          i.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          88
+        </td>
+        <td>
+          2221
+          -
+          2252
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          res.+(scala.Predef.charWrapper(scala.Predef.augmentString(digits).apply(i.+(1))).asDigit)
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          87
+        </td>
+        <td>
+          2228
+          -
+          2251
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.runtime.RichChar.asDigit
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.charWrapper(scala.Predef.augmentString(digits).apply(i.+(1))).asDigit
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          90
+        </td>
+        <td>
+          2197
+          -
+          2253
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          Main.digitSum
+        </td>
+        <td style="background: #AEF1AE">
+          Main.this.digitSum(digits, i.+(1), res.+(scala.Predef.charWrapper(scala.Predef.augmentString(digits).apply(i.+(1))).asDigit))
+        </td>
+      </tr><tr>
+        <td>
+          98
+        </td>
+        <td>
+          84
+        </td>
+        <td>
+          2214
+          -
+          2219
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          i.+(1)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
