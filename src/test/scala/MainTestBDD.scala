@@ -5,7 +5,7 @@ class MainTestBDD extends FunSpec{
   describe("Q1. List Print"){
     it(" should not take empty list"){
      // val list = Main.show_list(List())
-      assertThrows[IllegalStateException](Main.show_list(List()))
+      assertThrows[IllegalStateException](Main.showList(List()))
     }
   }
   describe("Q2. Finding Max"){
@@ -18,10 +18,10 @@ class MainTestBDD extends FunSpec{
   }
 
   describe("Q3. Nth Fibonacci "){
-    it(" should output 55 for n equal to 10 ") {assert(Main.n_fibonacci(10) == 55) }
+    it(" should output 55 for n equal to 10 ") {assert(Main.nfibonacci(10) == 55) }
   }
 
   describe("Q4. Sum of digits "){
-    it(" should output 3 for input 5 ") { assert(Main.sum_of_digits(5) == 3) }
+    it(" should output 3 for input 5 ") { assert(Main.sumOfDigits(5) == 3) }
   }
 }

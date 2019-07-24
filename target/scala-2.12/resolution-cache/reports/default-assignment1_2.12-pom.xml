@@ -6,8 +6,8 @@
 		module="assignment1_2.12"
 		revision="0.1"
 		conf="pom"
-		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190723135439"/>
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, scoveragePlugin"
+		date="20190724160115"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

@@ -1,2 +1,5 @@
-[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /home/knoldus/ScalaProjects/assignment1/project/target/.sbt-compilation-infos/assignment1-compile/.sbt-idea-lock ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /home/knoldus/ScalaProjects/assignment1/project/target/.sbt-compilation-infos/assignment1-compile/.sbt-idea-lock.[0m
+[0m[[0m[0minfo[0m] [0m[0m[info] Cleaning datadir [/home/knoldus/ScalaProjects/assignment1/target/scala-2.12/scoverage-data][0m
+[0m[[0m[0minfo[0m] [0m[0m[info] Beginning coverage instrumentation[0m
+[0m[[0m[0minfo[0m] [0m[0m[info] Instrumentation completed [90 statements][0m
+[0m[[0m[0minfo[0m] [0m[0m[info] Wrote instrumentation file [/home/knoldus/ScalaProjects/assignment1/target/scala-2.12/scoverage-data/scoverage.coverage.xml][0m
+[0m[[0m[0minfo[0m] [0m[0m[info] Will write measurement data to [/home/knoldus/ScalaProjects/assignment1/target/scala-2.12/scoverage-data][0m

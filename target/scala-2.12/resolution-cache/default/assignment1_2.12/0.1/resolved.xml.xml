@@ -4,7 +4,7 @@
 		module="assignment1_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20190723135439"
+		publication="20190724160115"
 	>
 		<description>
 		assignment1
@@ -22,6 +22,7 @@
 		<conf name="plugin" visibility="private" description=""/>
 		<conf name="pom" visibility="public" description=""/>
 		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="scoveragePlugin" visibility="private" description=""/>
 	</configurations>
 	<publications>
 		<artifact name="assignment1_2.12" type="pom" ext="pom" conf="pom"/>
@@ -32,6 +33,8 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.7" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.7" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.scoverage" name="scalac-scoverage-runtime_2.12" rev="1.3.1" conf="compile->default(compile)"/>
+		<dependency org="org.scoverage" name="scalac-scoverage-plugin_2.12" rev="1.3.1" conf="scoveragePlugin->default(compile)"/>
 		<dependency org="org.scalactic" name="scalactic_2.12" rev="3.0.8" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.8" conf="test->default(compile)"/>
 	</dependencies>

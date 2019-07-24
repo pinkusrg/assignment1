@@ -6,7 +6,7 @@ class MainTestTDD extends FunSuite {
 
   test("Q1. Main.show_list"){
 
-    assertThrows[IllegalStateException](Main.show_list(List()))
+    assertThrows[IllegalStateException](Main.showList(List()))
 
   }
 
@@ -24,16 +24,16 @@ class MainTestTDD extends FunSuite {
    /* assertResult(34){
       Main.n_fibonacci(10)
     }*/
-    assert(Main.n_fibonacci(10) == 55)
-    assert(Main.n_fibonacci(20) == 6765)
-    assert(Main.n_fibonacci(0) == 0)
-    assert(Main.n_fibonacci(1) == 1)
-    assert(Main.n_fibonacci(2) == 1)
+    assert(Main.nfibonacci(10) == 55)
+    assert(Main.nfibonacci(20) == 6765)
+    assert(Main.nfibonacci(0) == 0)
+    assert(Main.nfibonacci(1) == 1)
+    assert(Main.nfibonacci(2) == 1)
   }
 
   test("Q4. Main.sum_of_digits"){
-    assert(Main.sum_of_digits(5) == 3)
-    assert(Main.sum_of_digits(8) == 9)
+    assert(Main.sumOfDigits(5) == 3)
+    assert(Main.sumOfDigits(8) == 9)
   }
 
 
